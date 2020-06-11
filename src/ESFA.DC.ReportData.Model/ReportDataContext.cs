@@ -15,7 +15,7 @@ namespace ESFA.DC.PeriodEnd.DataPersist.Model
         {
         }
 
-        public virtual DbSet<McaGlaDevolvedOccupancyReportV2> McaGlaDevolvedOccupancyReportV2s { get; set; }
+        public virtual DbSet<McaGlaDevolvedOccupancyReport> McaGlaDevolvedOccupancyReports { get; set; }
 
         // Unable to generate entity type for table 'dbo.AppsAdditionalPayments'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.AppsCoInvestmentContribution'. Please see the warning messages.
@@ -27,7 +27,7 @@ namespace ESFA.DC.PeriodEnd.DataPersist.Model
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\;Database=ESFA.DC.PeriodEnd.DataPerist.Database;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.\\;Database=ESFA.DC.ReportData.Database;Trusted_Connection=True;");
             }
         }
 
@@ -35,9 +35,9 @@ namespace ESFA.DC.PeriodEnd.DataPersist.Model
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
-            modelBuilder.Entity<McaGlaDevolvedOccupancyReportV2>(entity =>
+            modelBuilder.Entity<McaGlaDevolvedOccupancyReport>(entity =>
             {
-                entity.ToTable("McaGlaDevolvedOccupancyReportV2");
+                entity.ToTable("McaGlaDevolvedOccupancyReport");
 
                 entity.Property(e => e.AchievementElement).HasColumnType("decimal(10, 5)");
 

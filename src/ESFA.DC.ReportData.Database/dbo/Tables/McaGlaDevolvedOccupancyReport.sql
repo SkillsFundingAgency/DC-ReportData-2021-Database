@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[McaGlaDevolvedOccupancyReportV2]
+﻿CREATE TABLE [dbo].[McaGlaDevolvedOccupancyReport]
 (
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Year] [varchar](10) NOT NULL,
@@ -36,6 +36,7 @@
 	[LearningPlannedEndDate] [date] NULL,
 	[CompletionStatus] [int] NULL,
 	[LearningActualEndDate] [date] NULL,
+	WithdrawReason [int] NULL,
 	[Outcome] [int] NULL,
 	[AdditionalDeliveryHours] [int] NULL,
 	[LearningStartDatePostcode] [varchar](8) NULL,
@@ -57,6 +58,8 @@
 	[LDFAMTypeDAMD] [varchar](5) NULL,
 	[LDFAMTypeRestartIndicator] [varchar](5) NULL,
 	[LDFAMTypeCommunityLearningProvisionType] [varchar](5) NULL,
+	[LDFAMTypeHHSA] [varchar](20) NULL,
+	[LDFAMTypeHHSB] [varchar](20) NULL,
 	[ProviderSpecifiedDeliveryMonitoringA] [varchar](20) NULL,
 	[ProviderSpecifiedDeliveryMonitoringB] [varchar](20) NULL,
 	[ProviderSpecifiedDeliveryMonitoringC] [varchar](20) NULL,
@@ -142,5 +145,5 @@
 	[TotalEarnedCash] [decimal](15, 5) NULL,
 	[OFFICIALSENSITIVE] [varchar](100) NULL,
 	[CreatedDateTime] [datetime] NULL, 
-    CONSTRAINT [PK_McaGlaDevolvedOccupancyReportV2] PRIMARY KEY ([Id]),
+    CONSTRAINT [PK_McaGlaDevolvedOccupancyReport] PRIMARY KEY ([Id]),
 )

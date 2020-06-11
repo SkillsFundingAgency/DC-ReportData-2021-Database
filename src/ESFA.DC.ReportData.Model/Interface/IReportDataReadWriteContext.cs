@@ -8,7 +8,7 @@ namespace ESFA.DC.PeriodEnd.DataPersist.Model.Interface
 {
     public interface IReportDataReadWriteContext : IDisposable
     {
-        DbSet<McaGlaDevolvedOccupancyReportV2> McaGlaDevolvedOccupancyReportV2s { get; }
+        DbSet<McaGlaDevolvedOccupancyReport> McaGlaDevolvedOccupancyReports { get; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 

@@ -6,8 +6,8 @@ namespace ESFA.DC.PeriodEnd.DataPersist.Model
 {
     public partial class ReportDataContext : IReportDataReadWriteContext, IReportDataContext
     {
-        DbSet<McaGlaDevolvedOccupancyReportV2> IReportDataReadWriteContext.McaGlaDevolvedOccupancyReportV2s => McaGlaDevolvedOccupancyReportV2s;
+        DbSet<McaGlaDevolvedOccupancyReport> IReportDataReadWriteContext.McaGlaDevolvedOccupancyReports => McaGlaDevolvedOccupancyReports;
 
-        IQueryable<McaGlaDevolvedOccupancyReportV2> IReportDataContext.McaGlaDevolvedOccupancyReportV2s => McaGlaDevolvedOccupancyReportV2s;
+        IQueryable<McaGlaDevolvedOccupancyReport> IReportDataContext.McaGlaDevolvedOccupancyReports => McaGlaDevolvedOccupancyReports;
     }
 }
