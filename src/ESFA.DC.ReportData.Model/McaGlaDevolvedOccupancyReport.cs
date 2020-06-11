@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ESFA.DC.PeriodEnd.DataPersist.Model
 {
-    public partial class McaGlaDevolvedOccupancyReportV2
+    public partial class McaGlaDevolvedOccupancyReport
     {
         public int Id { get; set; }
         public string Year { get; set; }
@@ -41,6 +41,8 @@ namespace ESFA.DC.PeriodEnd.DataPersist.Model
         public DateTime? LearningPlannedEndDate { get; set; }
         public int? CompletionStatus { get; set; }
         public DateTime? LearningActualEndDate { get; set; }
+        public int? WithdrawReason { get; set; }
+
         public int? Outcome { get; set; }
         public int? AdditionalDeliveryHours { get; set; }
         public string LearningStartDatePostcode { get; set; }
@@ -62,6 +64,9 @@ namespace ESFA.DC.PeriodEnd.DataPersist.Model
         public string LDFAMTypeDAMD { get; set; }
         public string LDFAMTypeRestartIndicator { get; set; }
         public string LDFAMTypeCommunityLearningProvisionType { get; set; }
+        public string LDFAMTypeHHSA { get; set; }
+        public string LDFAMTypeHHSB { get; set; }
+
         public string ProviderSpecifiedDeliveryMonitoringA { get; set; }
         public string ProviderSpecifiedDeliveryMonitoringB { get; set; }
         public string ProviderSpecifiedDeliveryMonitoringC { get; set; }
