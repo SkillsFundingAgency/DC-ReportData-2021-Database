@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 
-namespace ESFA.DC.ILR.DataStore.EF.Console.DesignTime
+namespace ESFA.DC.ReportData.EF.Console.DesignTime
 {
     public class ReferenceDataPluralizer : IPluralizer
     {

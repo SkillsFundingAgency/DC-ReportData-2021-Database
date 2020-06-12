@@ -7,7 +7,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ESFA.DC.ReportData.Database
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESFA.DC.ReportData.Model", "ESFA.DC.ReportData.Model\ESFA.DC.ReportData.Model.csproj", "{3224A7B7-2A31-4123-9DE3-B23A7B00FAA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESFA.DC.ReportData.DataPersist.EF.Console", "ESFA.DC.ReportData.DataPersist.EF.Console\ESFA.DC.ReportData.DataPersist.EF.Console.csproj", "{9EDC2412-B15C-4975-90EE-43C85F0781BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESFA.DC.ReportData.EF.Console", "ESFA.DC.ReportData.DataPersist.EF.Console\ESFA.DC.ReportData.EF.Console.csproj", "{9EDC2412-B15C-4975-90EE-43C85F0781BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

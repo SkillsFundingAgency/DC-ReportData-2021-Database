@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace ESFA.DC.PeriodEnd.DataPersist.Model
+namespace ESFA.DC.ReportData.Model
 {
-    public partial class McaGlaDevolvedOccupancyReport
+    public class McaGlaDevolvedOccupancyReport
     {
         public int Id { get; set; }
         public string Year { get; set; }
