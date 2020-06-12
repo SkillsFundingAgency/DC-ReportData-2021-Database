@@ -73,7 +73,6 @@ stages:
     #    noCache: true
 
     - task: DotNetCoreCLI@2
-      enabled: true
       displayName: 'dotnet build'
       enabled: false
       inputs:
