@@ -18,6 +18,7 @@ stages:
   - job: Build
     displayName: Build    
     variables:
+      "Build.Solution": 'src\**\*.sln'
       "Build.Configuration": 'Release'
       "Build.Platform": 'Any CPU'
       "Nuget.Feed": 'dct-pkg'  
@@ -84,9 +85,9 @@ stages:
     
     - task: MSBuild@1
       enabled: true
-      displayName: 'Build solution **/*.sln'
+      displayName: 'Build solution'
       inputs:
-        solution: '$(Solution)'
+        solution: '$(Build.Solution)'
         platform: '$(Build.Platform)'
         configuration: '$(Build.Configuration)'
         msbuildArguments: '-p:version=$(Build.BuildNumber) -p:FileVersion=$(Build.BuildNumber) -p:SkipInvalidConfigurations=true'
