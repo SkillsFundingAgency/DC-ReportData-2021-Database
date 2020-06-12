@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ESFA.DC.PeriodEnd.DataPersist.Model.Interface
+namespace ESFA.DC.ReportData.Model.Interface
 {
     public interface IReportDataContext : IDisposable
     {

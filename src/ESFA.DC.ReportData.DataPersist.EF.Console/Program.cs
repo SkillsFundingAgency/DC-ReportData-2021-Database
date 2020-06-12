@@ -1,4 +1,4 @@
-﻿namespace ESFA.DC.PeriodEnd.DataPersist.EF.Console
+﻿namespace ESFA.DC.ReportData.EF.Console
 {
     class Program
     {

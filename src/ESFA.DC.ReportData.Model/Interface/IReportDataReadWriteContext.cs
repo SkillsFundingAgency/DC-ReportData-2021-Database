@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace ESFA.DC.PeriodEnd.DataPersist.Model.Interface
+namespace ESFA.DC.ReportData.Model.Interface
 {
     public interface IReportDataReadWriteContext : IDisposable
     {

@@ -1,8 +1,6 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace ESFA.DC.PeriodEnd.DataPersist.Model
+namespace ESFA.DC.ReportData.Model
 {
     public partial class ReportDataContext : DbContext
     {

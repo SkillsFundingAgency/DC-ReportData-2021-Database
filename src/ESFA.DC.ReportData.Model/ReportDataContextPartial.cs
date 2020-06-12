@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using ESFA.DC.PeriodEnd.DataPersist.Model.Interface;
+using ESFA.DC.ReportData.Model.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace ESFA.DC.PeriodEnd.DataPersist.Model
+namespace ESFA.DC.ReportData.Model
 {
     public partial class ReportDataContext : IReportDataReadWriteContext, IReportDataContext
     {
