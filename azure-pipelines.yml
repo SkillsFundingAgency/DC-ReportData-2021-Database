@@ -1,5 +1,6 @@
 
-name: $(VersionNumberMajor).$(VersionNumberMinor)$(Rev:.rrrr)
+name: $(USEGITVERSION_GITVERSION_SEMVER)
+#name: $(VersionNumberMajor).$(VersionNumberMinor)$(Rev:.rrrr)
 
 resources:
 - repo: self
@@ -51,6 +52,14 @@ stages:
       inputs:
         versionSpec: '> $(Nuget.Version)'
         checkLatest: true
+
+    - task: UseGitVersion@5
+      displayName: use Git Version to generate build number
+      inputs:
+        versionSpec: '5.x'
+
+    - powershell: '(gci env:*).GetEnumerator() | Where-Object {$_.Name -Like "*BUILD*" -or $_.Name -Like "*GITVERSION*" -or $_.Name -Like "*CI_Version*" } | Sort-Object Name | ForEach {Write-Host "Name: " + $_.Name + " | Value : " + $_.Value} '
+      displayName: 'Display Git Version Variables'
 
     # Generate the report using ReportGenerator (https://github.com/danielpalme/ReportGenerator)
     # First install the tool on the machine, then run it
