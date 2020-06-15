@@ -1,5 +1,6 @@
 
-name: $(VersionNumberMajor).$(VersionNumberMinor)$(Rev:.rrrr)
+name: $(USEGITVERSION_GITVERSION_SEMVER)
+#name: $(VersionNumberMajor).$(VersionNumberMinor)$(Rev:.rrrr)
 
 resources:
 - repo: self
