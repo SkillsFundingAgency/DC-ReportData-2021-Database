@@ -53,7 +53,7 @@ stages:
         checkLatest: true
 
     - task: UseGitVersion@5
-      name: use Git Version to generate build number
+      displayName: use Git Version to generate build number
       inputs:
         versionSpec: '5.x'
 
