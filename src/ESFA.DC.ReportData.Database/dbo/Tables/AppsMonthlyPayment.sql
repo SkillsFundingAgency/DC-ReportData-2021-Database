@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [dbo].[AppsMonthlyPayment](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Ukprn] [int] NOT NULL,
 	[ReturnPeriod] [int] NOT NULL,
 	[PaymentLearnerReferenceNumber] [varchar](250) NULL,
@@ -179,8 +180,7 @@
 	[TotalApprenticeAdditionalPayments] [decimal](15, 5) NULL,
 	[TotalEnglishAndMathsPayments] [decimal](15, 5) NULL,
 	[TotalLearningSupportDisadvantageAndFrameworkUpliftPayments] [decimal](15, 5) NULL,
-	[TotalPayments] [decimal](15, 5) NULL 
+	[TotalPayments] [decimal](15, 5) NULL,
+	CONSTRAINT [PK_AppsMonthlyPayments] PRIMARY KEY ([Id])
 )
 GO
-
-CREATE CLUSTERED INDEX [IX_AppsMonthlyPayment_Ukprn_ReturnPeriod] ON [dbo].[AppsMonthlyPayment] ([Ukprn],[ReturnPeriod])

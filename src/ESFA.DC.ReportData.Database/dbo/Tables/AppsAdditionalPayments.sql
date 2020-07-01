@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [dbo].[AppsAdditionalPayments](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Ukprn] [int] NOT NULL,
 	[ReturnPeriod] [int] NOT NULL,
 	[LearnerReferenceNumber] [varchar](12) NULL,
@@ -39,9 +40,8 @@
 	[R13Payments] [decimal](15, 5) NULL,
 	[R14Payments] [decimal](15, 5) NULL,
 	[TotalEarnings] [decimal](15, 5) NULL,
-	[TotalPaymentsYearToDate] [decimal](15, 5) NULL 
+	[TotalPaymentsYearToDate] [decimal](15, 5) NULL,
+	CONSTRAINT [PK_AppsAdditionalPayments] PRIMARY KEY ([Id])
 )
 
 GO
-
-CREATE CLUSTERED INDEX [IX_AppsAdditionalPayments_Ukprn_ReturnPeriod] ON [dbo].[AppsAdditionalPayments] ([Ukprn],[ReturnPeriod])

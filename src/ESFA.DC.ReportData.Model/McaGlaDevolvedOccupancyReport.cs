@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ESFA.DC.ReportData.Model
 {
-    public class McaGlaDevolvedOccupancyReport
+    public partial class McaGlaDevolvedOccupancyReport
     {
         public int Id { get; set; }
         public string Year { get; set; }
@@ -41,7 +42,6 @@ namespace ESFA.DC.ReportData.Model
         public int? CompletionStatus { get; set; }
         public DateTime? LearningActualEndDate { get; set; }
         public int? WithdrawReason { get; set; }
-
         public int? Outcome { get; set; }
         public int? AdditionalDeliveryHours { get; set; }
         public string LearningStartDatePostcode { get; set; }
@@ -65,7 +65,6 @@ namespace ESFA.DC.ReportData.Model
         public string LDFAMTypeCommunityLearningProvisionType { get; set; }
         public string LDFAMTypeHHSA { get; set; }
         public string LDFAMTypeHHSB { get; set; }
-
         public string ProviderSpecifiedDeliveryMonitoringA { get; set; }
         public string ProviderSpecifiedDeliveryMonitoringB { get; set; }
         public string ProviderSpecifiedDeliveryMonitoringC { get; set; }
