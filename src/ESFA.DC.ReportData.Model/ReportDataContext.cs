@@ -101,6 +101,14 @@ namespace ESFA.DC.ReportData.Model
                     .HasMaxLength(250)
                     .IsUnicode(false);
 
+                entity.Property(e => e.GivenNames)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FamilyName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.R13Payments).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.R14Payments).HasColumnType("decimal(15, 5)");
