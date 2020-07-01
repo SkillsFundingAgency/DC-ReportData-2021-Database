@@ -1,6 +1,7 @@
 ﻿CREATE TABLE [dbo].[AppsCoInvestmentContribution]
 (
-	[Ukprn] INT NOT NULL , 
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+    [Ukprn] INT NOT NULL , 
     [ReturnPeriod] INT NOT NULL, 
     [LearnRefNumber] VARCHAR(12) NULL, 
     [UniqueLearnerNumber] BIGINT NULL,
@@ -38,9 +39,9 @@
     [CompletionEarningThisFundingYear] DECIMAL(15,5) NOT NULL, 
     [CompletionPaymentsThisFundingYear] DECIMAL(15,5) NOT NULL, 
     [EmployerCoInvestmentPercentage] DECIMAL(15,5) NULL, 
-    [ApplicableProgrammeStartDate] DATETIME NULL 
+    [ApplicableProgrammeStartDate] DATETIME NULL,
+    CONSTRAINT [PK_AppsCoInvestmentContribution] PRIMARY KEY ([Id])
 )
 
 GO
 
-CREATE CLUSTERED INDEX [IX_AppsCoInvestmentContribution_Ukprn_ReturnPeriod] ON [dbo].[AppsCoInvestmentContribution] ([Ukprn],[ReturnPeriod])
