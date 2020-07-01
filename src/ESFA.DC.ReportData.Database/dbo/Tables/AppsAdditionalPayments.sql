@@ -5,6 +5,8 @@
 	[UniqueLearnerNumber] [bigint] NULL,
 	[ProviderSpecifiedLearnerMonitoringA] [varchar](250) NULL,
 	[ProviderSpecifiedLearnerMonitoringB] [varchar](250) NULL,
+	[FamilyName] [varchar](100) NULL,
+	[GivenNames] [varchar](100) NULL,
 	[LearningStartDate] [datetime] NULL,
 	[FundingLineType] [varchar](max) NULL,
 	[TypeOfAdditionalPayment] [varchar](max) NULL,
