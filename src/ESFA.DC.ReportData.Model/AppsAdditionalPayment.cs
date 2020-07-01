@@ -12,6 +12,8 @@ namespace ESFA.DC.ReportData.Model
         public long? UniqueLearnerNumber { get; set; }
         public string ProviderSpecifiedLearnerMonitoringA { get; set; }
         public string ProviderSpecifiedLearnerMonitoringB { get; set; }
+        public string FamilyName { get; set; }
+        public string GivenNames { get; set; }
         public DateTime? LearningStartDate { get; set; }
         public string FundingLineType { get; set; }
         public string TypeOfAdditionalPayment { get; set; }
