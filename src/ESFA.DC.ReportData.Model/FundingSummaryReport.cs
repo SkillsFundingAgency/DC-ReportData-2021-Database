@@ -12,18 +12,18 @@ namespace ESFA.DC.ReportData.Model
         public string FundingCategory { get; set; }
         public string FundingSubCategory { get; set; }
         public string FundLine { get; set; }
-        public decimal? Aug19 { get; set; }
-        public decimal? Sep19 { get; set; }
-        public decimal? Oct19 { get; set; }
-        public decimal? Nov19 { get; set; }
-        public decimal? Dec19 { get; set; }
-        public decimal? Jan20 { get; set; }
-        public decimal? Feb20 { get; set; }
-        public decimal? Mar20 { get; set; }
-        public decimal? Apr20 { get; set; }
-        public decimal? May20 { get; set; }
-        public decimal? Jun20 { get; set; }
-        public decimal? Jul20 { get; set; }
+        public decimal? Aug20 { get; set; }
+        public decimal? Sep20 { get; set; }
+        public decimal? Oct20 { get; set; }
+        public decimal? Nov20 { get; set; }
+        public decimal? Dec20 { get; set; }
+        public decimal? Jan21 { get; set; }
+        public decimal? Feb21 { get; set; }
+        public decimal? Mar21 { get; set; }
+        public decimal? Apr21 { get; set; }
+        public decimal? May21 { get; set; }
+        public decimal? Jun21 { get; set; }
+        public decimal? Jul21 { get; set; }
         public decimal? AugMar { get; set; }
         public decimal? AprJul { get; set; }
         public decimal? YearToDate { get; set; }

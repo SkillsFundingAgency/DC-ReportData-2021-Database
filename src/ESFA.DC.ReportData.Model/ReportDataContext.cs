@@ -53,11 +53,19 @@ namespace ESFA.DC.ReportData.Model
 
                 entity.Property(e => e.EmployerNameFromApprenticeshipService).IsUnicode(false);
 
+                entity.Property(e => e.FamilyName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.FebruaryEarnings).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.FebruaryR07Payments).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.FundingLineType).IsUnicode(false);
+
+                entity.Property(e => e.GivenNames)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.JanuaryEarnings).HasColumnType("decimal(15, 5)");
 
@@ -99,14 +107,6 @@ namespace ESFA.DC.ReportData.Model
 
                 entity.Property(e => e.ProviderSpecifiedLearnerMonitoringB)
                     .HasMaxLength(250)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.GivenNames)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.FamilyName)
-                    .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.R13Payments).HasColumnType("decimal(15, 5)");
@@ -546,19 +546,19 @@ namespace ESFA.DC.ReportData.Model
             {
                 entity.ToTable("FundingSummaryReport");
 
-                entity.Property(e => e.Apr20).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Apr21).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.AprJul).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Aug19).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Aug20).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.AugMar).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.ContractNo).HasMaxLength(100);
 
-                entity.Property(e => e.Dec19).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Dec20).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Feb20).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Feb21).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.FundLine).HasMaxLength(200);
 
@@ -566,21 +566,21 @@ namespace ESFA.DC.ReportData.Model
 
                 entity.Property(e => e.FundingSubCategory).HasMaxLength(70);
 
-                entity.Property(e => e.Jan20).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Jan21).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Jul20).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Jul21).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Jun20).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Jun21).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Mar20).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Mar21).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.May20).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.May21).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Nov19).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Nov20).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Oct19).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Oct20).HasColumnType("decimal(15, 5)");
 
-                entity.Property(e => e.Sep19).HasColumnType("decimal(15, 5)");
+                entity.Property(e => e.Sep20).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.Total).HasColumnType("decimal(15, 5)");
 
@@ -701,6 +701,10 @@ namespace ESFA.DC.ReportData.Model
                     .HasMaxLength(3)
                     .IsUnicode(false);
 
+                entity.Property(e => e.FamilyName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.FebruaryAimAchievementEarnedCash).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.FebruaryBalancingPaymentEarnedcash).HasColumnType("decimal(15, 5)");
@@ -712,6 +716,10 @@ namespace ESFA.DC.ReportData.Model
                 entity.Property(e => e.FebruaryOnProgrammeEarnedCash).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.FundingLineType)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.GivenNames)
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
@@ -762,6 +770,14 @@ namespace ESFA.DC.ReportData.Model
                     .IsUnicode(false);
 
                 entity.Property(e => e.LDFAMTypeDAMD)
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LDFAMTypeDAME)
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LDFAMTypeDAMF)
                     .HasMaxLength(5)
                     .IsUnicode(false);
 
@@ -841,6 +857,10 @@ namespace ESFA.DC.ReportData.Model
                     .HasMaxLength(8)
                     .IsUnicode(false);
 
+                entity.Property(e => e.LocalAuthorityCode)
+                    .HasMaxLength(9)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.MarchAimAchievementEarnedCash).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.MarchBalancingPaymentEarnedcash).HasColumnType("decimal(15, 5)");
@@ -893,8 +913,16 @@ namespace ESFA.DC.ReportData.Model
 
                 entity.Property(e => e.OriginalLearningStartDate).HasColumnType("date");
 
+                entity.Property(e => e.PartnerUKPRNName)
+                    .HasMaxLength(250)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.PostcodePriorToEnrolment)
                     .HasMaxLength(8)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ProviderName)
+                    .HasMaxLength(250)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ProviderSpecifiedDeliveryMonitoringA)
@@ -940,7 +968,13 @@ namespace ESFA.DC.ReportData.Model
                     .HasMaxLength(36)
                     .IsUnicode(false);
 
+                entity.Property(e => e.StartForFundingPurposes).HasColumnType("date");
+
                 entity.Property(e => e.Tier2SectorSubjectArea).HasColumnType("decimal(10, 2)");
+
+                entity.Property(e => e.Tier2SectorSubjectAreaName)
+                    .HasMaxLength(60)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.TotalAimAchievementEarnedCash).HasColumnType("decimal(15, 5)");
 

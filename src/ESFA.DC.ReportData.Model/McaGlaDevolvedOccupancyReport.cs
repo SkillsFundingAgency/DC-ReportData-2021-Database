@@ -10,8 +10,11 @@ namespace ESFA.DC.ReportData.Model
         public int Return { get; set; }
         public int AcMnth { get; set; }
         public int UKPRN { get; set; }
+        public string ProviderName { get; set; }
         public string LearnerReferenceNumber { get; set; }
         public long? UniqueLearnerNumber { get; set; }
+        public string FamilyName { get; set; }
+        public string GivenNames { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public int Ethnicity { get; set; }
         public string Sex { get; set; }
@@ -33,6 +36,7 @@ namespace ESFA.DC.ReportData.Model
         public string NotionalNVQLevel { get; set; }
         public string EntitlementCategoryLevel2or3 { get; set; }
         public decimal? Tier2SectorSubjectArea { get; set; }
+        public string Tier2SectorSubjectAreaName { get; set; }
         public int? FundingModel { get; set; }
         public int? FundingAdjustmentForPriorLearning { get; set; }
         public int? OtherFundingAdjment { get; set; }
@@ -45,6 +49,7 @@ namespace ESFA.DC.ReportData.Model
         public int? Outcome { get; set; }
         public int? AdditionalDeliveryHours { get; set; }
         public string LearningStartDatePostcode { get; set; }
+        public string LocalAuthorityCode { get; set; }
         public string ApplicableAreaFromSourceOfFunding { get; set; }
         public string LDFAMTypeSourceOfFunding { get; set; }
         public string LDFAMTypeFullOrCoFundingIndicator { get; set; }
@@ -61,6 +66,8 @@ namespace ESFA.DC.ReportData.Model
         public string LDFAMTypeDAMB { get; set; }
         public string LDFAMTypeDAMC { get; set; }
         public string LDFAMTypeDAMD { get; set; }
+        public string LDFAMTypeDAME { get; set; }
+        public string LDFAMTypeDAMF { get; set; }
         public string LDFAMTypeRestartIndicator { get; set; }
         public string LDFAMTypeCommunityLearningProvisionType { get; set; }
         public string LDFAMTypeHHSA { get; set; }
@@ -70,14 +77,17 @@ namespace ESFA.DC.ReportData.Model
         public string ProviderSpecifiedDeliveryMonitoringC { get; set; }
         public string ProviderSpecifiedDeliveryMonitoringD { get; set; }
         public int? LearnerEmploymentStatus { get; set; }
+        public int? ESMTypeEmploymentIntensityIndicator { get; set; }
         public int? ESMTypeBenefitStatusIndicator { get; set; }
         public string FundingLineType { get; set; }
+        public DateTime? StartForFundingPurposes { get; set; }
         public int? PlannedNumberOfOnProgrammeInstalments { get; set; }
         public decimal? AchievementElement { get; set; }
         public decimal? AchievementPercentage { get; set; }
         public decimal? NonPublicFundedContribution { get; set; }
         public decimal? CappingFactor { get; set; }
         public int? PartnerUKPRN { get; set; }
+        public string PartnerUKPRNName { get; set; }
         public string DeliveryLocationPostcode { get; set; }
         public decimal? AreaUplift { get; set; }
         public decimal? DisadvantageUplift { get; set; }
