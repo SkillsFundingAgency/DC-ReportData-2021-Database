@@ -968,8 +968,6 @@ namespace ESFA.DC.ReportData.Model
                     .HasMaxLength(36)
                     .IsUnicode(false);
 
-                entity.Property(e => e.StartForFundingPurposes).HasColumnType("date");
-
                 entity.Property(e => e.Tier2SectorSubjectArea).HasColumnType("decimal(10, 2)");
 
                 entity.Property(e => e.Tier2SectorSubjectAreaName)
