@@ -80,7 +80,7 @@ namespace ESFA.DC.ReportData.Model
         public int? ESMTypeEmploymentIntensityIndicator { get; set; }
         public int? ESMTypeBenefitStatusIndicator { get; set; }
         public string FundingLineType { get; set; }
-        public DateTime? StartForFundingPurposes { get; set; }
+        public bool? StartForFundingPurposes { get; set; }
         public int? PlannedNumberOfOnProgrammeInstalments { get; set; }
         public decimal? AchievementElement { get; set; }
         public decimal? AchievementPercentage { get; set; }

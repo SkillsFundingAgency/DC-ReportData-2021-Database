@@ -75,7 +75,7 @@
 	[ESMTypeEmploymentIntensityIndicator] [int] NULL,
 	[ESMTypeBenefitStatusIndicator] [int] NULL,
 	[FundingLineType] [varchar] (100) NULL,
-	[StartForFundingPurposes] [date] NULL,
+	[StartForFundingPurposes] [bit] NULL,
 	[PlannedNumberOfOnProgrammeInstalments] [int] NULL,
 	[AchievementElement] [decimal](10, 5) NULL,
 	[AchievementPercentage] [decimal](10, 5) NULL,
