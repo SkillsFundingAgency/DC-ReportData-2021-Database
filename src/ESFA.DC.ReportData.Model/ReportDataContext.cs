@@ -339,6 +339,16 @@ namespace ESFA.DC.ReportData.Model
 
                 entity.Property(e => e.LearnerEmploymentStatusDate).HasColumnType("datetime");
 
+                entity.Property(e => e.LearnerFamilyName)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LearnerGivenNames)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.LearningDeliveryAchievementDate).HasColumnType("datetime");
 
                 entity.Property(e => e.LearningDeliveryEndPointAssessmentOrganisation).IsUnicode(false);
@@ -445,9 +455,7 @@ namespace ESFA.DC.ReportData.Model
 
                 entity.Property(e => e.PaymentLearningStartDate).HasColumnType("datetime");
 
-                entity.Property(e => e.PaymentPriceEpisodeIdentifier).IsUnicode(false);
-
-                entity.Property(e => e.PaymentPriceEpisodeStartDate).IsUnicode(false);
+                entity.Property(e => e.PaymentPriceEpisodeStartDate).HasColumnType("datetime");
 
                 entity.Property(e => e.ProviderSpecifiedDeliveryMonitoringA).IsUnicode(false);
 
@@ -500,8 +508,6 @@ namespace ESFA.DC.ReportData.Model
                 entity.Property(e => e.R14ProviderAdditionalPayments).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.R14TotalPayments).HasColumnType("decimal(15, 5)");
-
-                entity.Property(e => e.RulebaseAecApprenticeshipPriceEpisodeAgreementIdentifier).IsUnicode(false);
 
                 entity.Property(e => e.RulebaseAecApprenticeshipPriceEpisodePriceEpisodeActualEndDate).HasColumnType("datetime");
 

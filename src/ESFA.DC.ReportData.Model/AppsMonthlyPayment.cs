@@ -8,6 +8,8 @@ namespace ESFA.DC.ReportData.Model
         public int Id { get; set; }
         public int Ukprn { get; set; }
         public int ReturnPeriod { get; set; }
+        public string LearnerFamilyName { get; set; }
+        public string LearnerGivenNames { get; set; }
         public string PaymentLearnerReferenceNumber { get; set; }
         public long? PaymentUniqueLearnerNumber { get; set; }
         public string LearnerCampusIdentifier { get; set; }
@@ -42,14 +44,12 @@ namespace ESFA.DC.ReportData.Model
         public string LearningDeliveryEndPointAssessmentOrganisation { get; set; }
         public int? RulebaseAecLearningDeliveryPlannedNumberOfOnProgrammeInstalmentsForAim { get; set; }
         public int? LearningDeliverySubContractedOrPartnershipUkprn { get; set; }
-        public string PaymentPriceEpisodeIdentifier { get; set; }
-        public string PaymentPriceEpisodeStartDate { get; set; }
+        public DateTime? PaymentPriceEpisodeStartDate { get; set; }
         public DateTime? RulebaseAecApprenticeshipPriceEpisodePriceEpisodeActualEndDate { get; set; }
         public string FcsContractContractAllocationContractAllocationNumber { get; set; }
         public string PaymentFundingLineType { get; set; }
         public int? PaymentApprenticeshipContractType { get; set; }
         public int? LearnerEmploymentStatusEmployerId { get; set; }
-        public string RulebaseAecApprenticeshipPriceEpisodeAgreementIdentifier { get; set; }
         public int? LearnerEmploymentStatus { get; set; }
         public DateTime? LearnerEmploymentStatusDate { get; set; }
         public decimal? AugustLevyPayments { get; set; }
