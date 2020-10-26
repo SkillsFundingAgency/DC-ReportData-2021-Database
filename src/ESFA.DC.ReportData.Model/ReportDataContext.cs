@@ -20,6 +20,7 @@ namespace ESFA.DC.ReportData.Model
         public virtual DbSet<AppsMonthlyPayment> AppsMonthlyPayments { get; set; }
         public virtual DbSet<FundingSummaryReport> FundingSummaryReports { get; set; }
         public virtual DbSet<LearnerLevelViewReport> LearnerLevelViewReports { get; set; }
+        public virtual DbSet<McaDestinationAndProgressionReport> McaDestinationAndProgressionReports { get; set; }
         public virtual DbSet<McaGlaDevolvedOccupancyReport> McaGlaDevolvedOccupancyReports { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -340,12 +341,10 @@ namespace ESFA.DC.ReportData.Model
                 entity.Property(e => e.LearnerEmploymentStatusDate).HasColumnType("datetime");
 
                 entity.Property(e => e.LearnerFamilyName)
-                    .IsRequired()
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LearnerGivenNames)
-                    .IsRequired()
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
@@ -629,6 +628,61 @@ namespace ESFA.DC.ReportData.Model
                 entity.Property(e => e.TotalEarningsForPeriod).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.TotalEarningsToDate).HasColumnType("decimal(15, 5)");
+            });
+
+            modelBuilder.Entity<McaDestinationAndProgressionReport>(entity =>
+            {
+                entity.ToTable("McaDestinationAndProgressionReport");
+
+                entity.Property(e => e.ApplicableAreaFromSourceOfFunding)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FamilyName)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.GivenNames)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LSDPostcode)
+                    .HasMaxLength(8)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LearnActEndDate).HasColumnType("datetime");
+
+                entity.Property(e => e.LearnRefNumber)
+                    .HasMaxLength(12)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LearningAimReference)
+                    .IsRequired()
+                    .HasMaxLength(8)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LearningAimTitle)
+                    .HasMaxLength(254)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.OutCollDate).HasColumnType("datetime");
+
+                entity.Property(e => e.OutEndDate).HasColumnType("datetime");
+
+                entity.Property(e => e.OutStartDate).HasColumnType("datetime");
+
+                entity.Property(e => e.OutType)
+                    .IsRequired()
+                    .HasMaxLength(3)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ProviderName).HasMaxLength(250);
+
+                entity.Property(e => e.SOF)
+                    .IsRequired()
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<McaGlaDevolvedOccupancyReport>(entity =>
