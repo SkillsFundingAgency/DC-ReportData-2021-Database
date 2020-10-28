@@ -69,6 +69,7 @@
     <Build Include="dbo\Tables\FundingSummaryReport.sql" />
     <Build Include="dbo\Tables\McaGlaDevolvedOccupancyReport.sql" />
     <Build Include="dbo\Tables\LearnerLevelViewReport.sql" />
+    <Build Include="dbo\Tables\McaDestinationAndProgressionReport.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="zz.Script.PreDeployment.sql" />
