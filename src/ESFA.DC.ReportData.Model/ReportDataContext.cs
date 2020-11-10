@@ -22,13 +22,14 @@ namespace ESFA.DC.ReportData.Model
         public virtual DbSet<LearnerLevelViewReport> LearnerLevelViewReports { get; set; }
         public virtual DbSet<McaDestinationAndProgressionReport> McaDestinationAndProgressionReports { get; set; }
         public virtual DbSet<McaGlaDevolvedOccupancyReport> McaGlaDevolvedOccupancyReports { get; set; }
+         public virtual DbSet<UYPSummaryViewReport> UYPSummaryViewReports { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\;Database=ESFA.DC.ReportData.Database;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.;Database=ReportsData2021;Trusted_Connection=True;");
             }
         }
 
@@ -1050,6 +1051,35 @@ namespace ESFA.DC.ReportData.Model
                     .IsRequired()
                     .HasMaxLength(10)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<UYPSummaryViewReport>(entity =>
+            {
+                entity.ToTable("UYPSummaryViewReport");
+
+                entity.Property(e => e.CoInvestmentPaymentsToCollectForThisPeriod).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.ESFAPlannedPaymentsForThisPeriod).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.EarningsReleased).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.SummaryTotal).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalCoInvestmentCollectedToDate).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalCostOfDataLocksForThisPeriod).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalCostOfHBCPForThisPeriod).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalCostofClawbackForThisPeriod).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalCostofOthersForThisPeriod).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalEarningsForThisPeriod).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalEarningsToDate).HasColumnType("decimal(15, 5)");
+
+                entity.Property(e => e.TotalPaymentsToDate).HasColumnType("decimal(15, 5)");
             });
         }
     }
