@@ -70,6 +70,7 @@
     <Build Include="dbo\Tables\McaGlaDevolvedOccupancyReport.sql" />
     <Build Include="dbo\Tables\LearnerLevelViewReport.sql" />
     <Build Include="dbo\Tables\McaDestinationAndProgressionReport.sql" />
+    <Build Include="dbo\Tables\UYPSummaryViewReport.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="zz.Script.PreDeployment.sql" />
@@ -113,5 +114,8 @@
       <DefaultValue>NotUsedLocally!</DefaultValue>
       <Value>$(SqlCmdVar__6)</Value>
     </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ESFA.DC.ReportData.Database.refactorlog" />
   </ItemGroup>
 </Project>
