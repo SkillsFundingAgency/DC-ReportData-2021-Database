@@ -1080,8 +1080,6 @@ namespace ESFA.DC.ReportData.Model
                 entity.Property(e => e.TotalEarningsToDate).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.TotalPaymentsToDate).HasColumnType("decimal(15, 5)");
-
-                entity.Property(e => e.YTDTotalEarnings).HasColumnType("decimal(15, 5)");
             });
         }
     }

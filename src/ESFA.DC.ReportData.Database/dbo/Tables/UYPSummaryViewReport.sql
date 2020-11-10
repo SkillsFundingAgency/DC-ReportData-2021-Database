@@ -20,7 +20,6 @@
     TotalEarningsToDate decimal(15,5),
 	TotalPaymentsToDate decimal(15,5),
     TotalCoInvestmentCollectedToDate decimal(15,5),
-    [YTDTotalEarnings] DECIMAL(15, 5) NULL, 
     [SummaryTotal] DECIMAL(15, 5) NULL,
     CONSTRAINT [PK_UYPSummaryViewReport] PRIMARY KEY ([Id]) 
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]

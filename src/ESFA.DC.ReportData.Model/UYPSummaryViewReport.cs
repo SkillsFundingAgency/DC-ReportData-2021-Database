@@ -6,7 +6,7 @@ namespace ESFA.DC.ReportData.Model
     public partial class UYPSummaryViewReport
     {
         public int Id { get; set; }
-        public int Ukprn { get; set; }
+        public long Ukprn { get; set; }
         public int ReturnPeriod { get; set; }
         public int? NumberofLearners { get; set; }
         public int? NumberofDatalocks { get; set; }
@@ -26,7 +26,6 @@ namespace ESFA.DC.ReportData.Model
         public decimal? TotalEarningsToDate { get; set; }
         public decimal? TotalPaymentsToDate { get; set; }
         public decimal? TotalCoInvestmentCollectedToDate { get; set; }
-        public decimal? YTDTotalEarnings { get; set; }
         public decimal? SummaryTotal { get; set; }
     }
 }
