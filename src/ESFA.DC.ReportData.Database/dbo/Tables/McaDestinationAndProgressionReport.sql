@@ -24,3 +24,10 @@
 	[OutCollDate] DATETIME NOT NULL,
     CONSTRAINT [PK_McaDestinationAndProgressionReport] PRIMARY KEY ([Id])
 )
+GO
+
+CREATE NONCLUSTERED INDEX [IDX_McaDestinationAndProgressionReport] ON [dbo].[McaDestinationAndProgressionReport]
+(
+	[Ukprn] ASC,
+	[Return] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]

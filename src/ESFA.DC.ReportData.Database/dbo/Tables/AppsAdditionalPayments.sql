@@ -43,5 +43,11 @@
 	[TotalPaymentsYearToDate] [decimal](15, 5) NULL,
 	CONSTRAINT [PK_AppsAdditionalPayments] PRIMARY KEY ([Id])
 )
-
 GO
+
+CREATE NONCLUSTERED INDEX [IDX_AppsAdditionalPayments] ON [dbo].[AppsAdditionalPayments]
+(
+	[Ukprn] ASC,
+	[ReturnPeriod] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]
+

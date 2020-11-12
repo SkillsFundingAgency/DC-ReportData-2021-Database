@@ -22,3 +22,9 @@
 	CONSTRAINT [PK_LearnerLevelViewReport] PRIMARY KEY ([Id])
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
+
+CREATE NONCLUSTERED INDEX [IDX_LearnerLevelViewReport] ON [dbo].[LearnerLevelViewReport]
+(
+	[Ukprn] ASC,
+	[ReturnPeriod] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]

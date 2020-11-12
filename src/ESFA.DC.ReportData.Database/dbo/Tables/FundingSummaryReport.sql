@@ -27,3 +27,9 @@
 )
 
 GO
+
+CREATE NONCLUSTERED INDEX [IDX_FundingSummaryReport] ON [dbo].[FundingSummaryReport]
+(
+	[Ukprn] ASC,
+	[ReturnPeriod] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]

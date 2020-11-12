@@ -157,3 +157,10 @@
 	[CreatedDateTime] [datetime] NULL, 
     CONSTRAINT [PK_McaGlaDevolvedOccupancyReport] PRIMARY KEY ([Id]),
 )
+GO
+
+CREATE NONCLUSTERED INDEX [IDX_McaGlaDevolvedOccupancyReport] ON [dbo].[McaGlaDevolvedOccupancyReport]
+(
+	[Ukprn] ASC,
+	[Return] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]

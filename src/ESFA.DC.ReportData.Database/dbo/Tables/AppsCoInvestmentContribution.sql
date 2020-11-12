@@ -45,3 +45,8 @@
 
 GO
 
+CREATE NONCLUSTERED INDEX [IDX_AppsCoInvestmentContribution] ON [dbo].[AppsCoInvestmentContribution]
+(
+	[Ukprn] ASC,
+	[ReturnPeriod] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]
