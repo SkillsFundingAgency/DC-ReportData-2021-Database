@@ -184,3 +184,9 @@
 	CONSTRAINT [PK_AppsMonthlyPayments] PRIMARY KEY ([Id])
 )
 GO
+
+CREATE NONCLUSTERED INDEX [IDX_AppsMonthlyPayment] ON [dbo].[AppsMonthlyPayment]
+(
+	[Ukprn] ASC,
+	[ReturnPeriod] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF) ON [PRIMARY]
