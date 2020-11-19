@@ -22,7 +22,7 @@ namespace ESFA.DC.ReportData.Model
         public virtual DbSet<LearnerLevelViewReport> LearnerLevelViewReports { get; set; }
         public virtual DbSet<McaDestinationAndProgressionReport> McaDestinationAndProgressionReports { get; set; }
         public virtual DbSet<McaGlaDevolvedOccupancyReport> McaGlaDevolvedOccupancyReports { get; set; }
-         public virtual DbSet<UYPSummaryViewReport> UYPSummaryViewReports { get; set; }
+        public virtual DbSet<UYPSummaryViewReport> UYPSummaryViewReports { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -39,6 +39,9 @@ namespace ESFA.DC.ReportData.Model
 
             modelBuilder.Entity<AppsAdditionalPayment>(entity =>
             {
+                entity.HasIndex(e => new { e.Ukprn, e.ReturnPeriod })
+                    .HasName("IDX_AppsAdditionalPayments");
+
                 entity.Property(e => e.AprilEarnings).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.AprilR09Payments).HasColumnType("decimal(15, 5)");
@@ -130,6 +133,9 @@ namespace ESFA.DC.ReportData.Model
             {
                 entity.ToTable("AppsCoInvestmentContribution");
 
+                entity.HasIndex(e => new { e.Ukprn, e.ReturnPeriod })
+                    .HasName("IDX_AppsCoInvestmentContribution");
+
                 entity.Property(e => e.ApplicableProgrammeStartDate).HasColumnType("datetime");
 
                 entity.Property(e => e.CoInvestmentDueFromEmployerForApril).HasColumnType("decimal(15, 5)");
@@ -206,6 +212,9 @@ namespace ESFA.DC.ReportData.Model
             modelBuilder.Entity<AppsMonthlyPayment>(entity =>
             {
                 entity.ToTable("AppsMonthlyPayment");
+
+                entity.HasIndex(e => new { e.Ukprn, e.ReturnPeriod })
+                    .HasName("IDX_AppsMonthlyPayment");
 
                 entity.Property(e => e.AprilApprenticeAdditionalPayments).HasColumnType("decimal(15, 5)");
 
@@ -552,6 +561,9 @@ namespace ESFA.DC.ReportData.Model
             {
                 entity.ToTable("FundingSummaryReport");
 
+                entity.HasIndex(e => new { e.Ukprn, e.ReturnPeriod })
+                    .HasName("IDX_FundingSummaryReport");
+
                 entity.Property(e => e.Apr21).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.AprJul).HasColumnType("decimal(15, 5)");
@@ -597,6 +609,9 @@ namespace ESFA.DC.ReportData.Model
             {
                 entity.ToTable("LearnerLevelViewReport");
 
+                entity.HasIndex(e => new { e.Ukprn, e.ReturnPeriod })
+                    .HasName("IDX_LearnerLevelViewReport");
+
                 entity.Property(e => e.CoInvestmentOutstandingFromEmplToDate).HasColumnType("decimal(15, 5)");
 
                 entity.Property(e => e.CoInvestmentPaymentsToCollectThisPeriod).HasColumnType("decimal(15, 5)");
@@ -635,17 +650,12 @@ namespace ESFA.DC.ReportData.Model
             {
                 entity.ToTable("McaDestinationAndProgressionReport");
 
+                entity.HasIndex(e => new { e.Ukprn, e.Return })
+                    .HasName("IDX_McaDestinationAndProgressionReport");
+
                 entity.Property(e => e.ApplicableAreaFromSourceOfFunding)
                     .IsRequired()
                     .HasMaxLength(10)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.FamilyName)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.GivenNames)
-                    .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LSDPostcode)
@@ -684,11 +694,18 @@ namespace ESFA.DC.ReportData.Model
                     .IsRequired()
                     .HasMaxLength(5)
                     .IsUnicode(false);
+
+                entity.Property(e => e.Year)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<McaGlaDevolvedOccupancyReport>(entity =>
             {
                 entity.ToTable("McaGlaDevolvedOccupancyReport");
+
+                entity.HasIndex(e => new { e.UKPRN, e.Return })
+                    .HasName("IDX_McaGlaDevolvedOccupancyReport");
 
                 entity.Property(e => e.AchievementElement).HasColumnType("decimal(10, 5)");
 
@@ -1056,6 +1073,9 @@ namespace ESFA.DC.ReportData.Model
             modelBuilder.Entity<UYPSummaryViewReport>(entity =>
             {
                 entity.ToTable("UYPSummaryViewReport");
+
+                entity.HasIndex(e => new { e.Ukprn, e.ReturnPeriod })
+                    .HasName("IDX_UYPSummaryViewReport");
 
                 entity.Property(e => e.CoInvestmentPaymentsToCollectForThisPeriod).HasColumnType("decimal(15, 5)");
 
