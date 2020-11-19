@@ -7,13 +7,12 @@ namespace ESFA.DC.ReportData.Model
     {
         public int Id { get; set; }
         public int Ukprn { get; set; }
+        public string Year { get; set; }
         public int Return { get; set; }
         public string ApplicableAreaFromSourceOfFunding { get; set; }
         public string ProviderName { get; set; }
         public string LearnRefNumber { get; set; }
         public long? UniqueLearnerNumber { get; set; }
-        public string FamilyName { get; set; }
-        public string GivenNames { get; set; }
         public string LearningAimReference { get; set; }
         public string LearningAimTitle { get; set; }
         public int FundingModel { get; set; }
