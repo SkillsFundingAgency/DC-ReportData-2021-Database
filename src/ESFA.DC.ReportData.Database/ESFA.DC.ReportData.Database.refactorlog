@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="789705f3-62d4-46b6-8b13-3515ded0de56" ChangeDateTime="11/09/2020 17:07:22">
+    <Property Name="ElementName" Value="[dbo].[UYPSummaryViewReport].[TotalEarnings]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UYPSummaryViewReport]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="YTDTotalEarnings" />
+  </Operation>
+</Operations>

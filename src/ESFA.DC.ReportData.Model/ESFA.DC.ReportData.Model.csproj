@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>DC</Authors>
+    <Company>ESFA</Company>
+    <Description>Model used by ILR Reports Data Persistance Service</Description>
+    <Version>0.0.4</Version>
+    <Product>ESFA.DC.ReportData.2021.Model</Product>
+    <PackageId>ESFA.DC.ReportData.2021.Model</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+  </ItemGroup>
+
+</Project>
